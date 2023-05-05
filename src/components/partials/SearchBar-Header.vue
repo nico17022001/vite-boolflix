@@ -1,7 +1,15 @@
 
 <script>
+import {store} from '../data/store'
+
 export default {
-  name: 'SearchBar-Header'
+  name: 'SearchBar-Header',
+
+  data(){
+    return{
+      store
+    }
+  }
   
 }
 </script>
@@ -22,12 +30,12 @@ export default {
   <div id="nav-container">
     <!-- SERACH BAR -->
     <div id="search-bar-container">
-      <input type="text" placeholder="Cerca un titolo">
+      <input type="text" placeholder="Cerca un titolo" v-model="store.titolo" @keyup.enter="$emit('srcMovie')">
     </div>
 
     <!-- BOTTONE CERCA -->
     <div id="search-container">
-      <button>CERCA</button>
+      <button @click="$emit('srcMovie')">CERCA</button>
     </div>
   </div>
 </template>
@@ -60,6 +68,8 @@ export default {
     margin: 0px 10px;
   }button{
     padding: 0px 5px;
+    cursor: pointer;
   }
+
   
 </style>

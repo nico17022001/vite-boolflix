@@ -13,6 +13,12 @@ export default {
 
   components:{
     SearchBarHeader,
+  },
+
+  methods:{
+    searchApi(){
+      this.$emit('getApi')
+    }
   }
 }
 </script>
@@ -22,7 +28,7 @@ export default {
   <div id="main-wrapper">
     <!-- CONTENITORE LOGO -->
     <div id="logo-box"><h2>BOOLFLIX</h2></div>
-    <SearchBarHeader/>
+    <SearchBarHeader @srcMovie="searchApi"/>
   </div>
 </template>
 

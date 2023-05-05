@@ -23,7 +23,11 @@ export default {
 
   methods:{
     getapi(){
-      axios.get(store.apiUrl)
+      axios.get(store.apiUrl,{
+        params:{
+          query: store.titolo
+        }
+      })
       .then(result =>{
         store.arrayFilm = result.data.results
         console.log(store.arrayFilm)
@@ -38,7 +42,8 @@ export default {
 </script>
 
 <template>
-  <Header/>
+  <Header @getApi="getapi"/>
+  <Main/>
 </template>
 
 <style lang="scss">
