@@ -27,7 +27,7 @@ export default {
   <!-- CONTENITORE NERO -->
   <div id="main-wrapper">
     <!-- CONTENITORE LOGO -->
-    <div id="logo-box"><h2>BOOLFLIX</h2></div>
+    <div id="logo-box"><img src="../assets/img/logo-boolflix_720.png" alt=""></div>
     <SearchBarHeader @srcMovie="searchApi"/>
   </div>
 </template>
@@ -41,7 +41,9 @@ export default {
     color: white;
     padding: 10px;
   }#logo-box{
-    color: #e80000;
+    width: 200px;
     margin-right: 40px;
+  }img{
+    width: 100%;
   }
 </style>
