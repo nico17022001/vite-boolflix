@@ -26,12 +26,26 @@ export default {
       </div>
       <!-- CONTENITORE DEI TITOLI -->
     <div id="cards-container">
+      <!-- CICLO I FILM -->
       <Cards v-for="film in store.arrayFilm" 
         :key="film.id"
         :title="film.title"
         :originalTitle="film.original_title"
         :language="film.original_language"
-        :rate="film.vote_average"
+        :poster_path="film.poster_path"
+        :rate="Math.ceil(film.vote_average / 2)"
+      />
+    </div>
+
+    <!-- CICLO LE SERIE -->
+    <div id="cards-container">
+      <Cards v-for="serie in store.arraySerie" 
+        :key="serie.id"
+        :title="serie.name"
+        :originalTitle="serie.original_name"
+        :language="serie.original_language"
+        :poster_path="serie.poster_path"
+        :rate="Math.ceil(serie.vote_average / 2)"
       />
     </div>
   </div>

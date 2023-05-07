@@ -1,4 +1,3 @@
-
 <script>
 import {store} from '../data/store'
 
@@ -30,12 +29,12 @@ export default {
   <div id="nav-container">
     <!-- SERACH BAR -->
     <div id="search-bar-container">
-      <input type="text" placeholder="Cerca un titolo" v-model="store.titolo" @keyup.enter="$emit('srcMovie')">
+      <input type="text" placeholder="Cerca un titolo" v-model="store.titolo" @keyup.enter="$emit('srcMovie'), $emit('srcSerie')">
     </div>
 
     <!-- BOTTONE CERCA -->
     <div id="search-container">
-      <button @click="$emit('srcMovie')">CERCA</button>
+      <button @click="$emit('srcMovie'), $emit('srcSerie')">CERCA</button>
     </div>
   </div>
 </template>

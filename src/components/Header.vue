@@ -18,6 +18,10 @@ export default {
   methods:{
     searchApi(){
       this.$emit('getApi')
+    },
+
+    searchApiSerie(){
+      this.$emit('getApiSerie')
     }
   }
 }
@@ -28,7 +32,7 @@ export default {
   <div id="main-wrapper">
     <!-- CONTENITORE LOGO -->
     <div id="logo-box"><img src="../assets/img/logo-boolflix_720.png" alt=""></div>
-    <SearchBarHeader @srcMovie="searchApi"/>
+    <SearchBarHeader @srcMovie="searchApi" @srcSerie="searchApiSerie"/>
   </div>
 </template>
 

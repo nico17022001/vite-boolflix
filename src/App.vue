@@ -32,6 +32,18 @@ export default {
         store.arrayFilm = result.data.results
         console.log(store.arrayFilm)
       })
+    },
+
+    getapiSerie(){
+      axios.get(store.apiUrlSerie,{
+        params:{
+          query: store.titolo
+        }
+      })
+      .then(result =>{
+        store.arraySerie = result.data.results
+        console.log(store.arraySerie)
+      })
     }
   },
 
@@ -42,7 +54,7 @@ export default {
 </script>
 
 <template>
-  <Header @getApi="getapi"/>
+  <Header @getApi="getapi" @getApiSerie="getapiSerie"/>
   <Main/>
 </template>
 
