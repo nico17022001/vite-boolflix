@@ -17,13 +17,13 @@ export default {
 }
 </script>
 
-<template>
+<template>  
   <!-- SFONDO MAIN -->
   <div id="main-wrapper">
     <div class="section" v-if="store.arrayFilm.length == 0">
       <!-- TITOLO SEZIONE -->
         <div class="section-title">
-          <h3>ORIGINALI NETFLIX</h3>
+          <h3>POPOLARI</h3>
         </div>
         <div id="cards-container">
           <!-- CICLO I FILM -->
@@ -80,7 +80,6 @@ export default {
           </div>
         </div>
       </div>
-
   </div>
 </template>
 

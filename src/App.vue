@@ -4,6 +4,7 @@ import Main from  './components/Main.vue'
 import Footer from './components/Footer.vue'
 import axios from 'axios'
 import {store} from './components/data/store'
+import "@fontsource/albert-sans"
 
 
 
@@ -30,6 +31,7 @@ export default {
       })
       .then(result =>{
         store.arrayFilm = result.data.results
+        store.titolo = ""
       })
     },
 
@@ -41,6 +43,7 @@ export default {
       })
       .then(result =>{
         store.arraySerie = result.data.results
+        store.titolo = ""
       })
     },
 
