@@ -30,7 +30,6 @@ export default {
       })
       .then(result =>{
         store.arrayFilm = result.data.results
-        console.log(store.arrayFilm)
       })
     },
 
@@ -42,13 +41,20 @@ export default {
       })
       .then(result =>{
         store.arraySerie = result.data.results
-        console.log(store.arraySerie)
       })
-    }
+    },
+
+    getPopular(){
+      axios.get(store.apiPopular)
+      .then(result =>{
+        store.arrayPopular = result.data.results
+      })
+    },
   },
 
   mounted(){
     this.getapi()
+    this.getPopular()
   }
 }
 </script>

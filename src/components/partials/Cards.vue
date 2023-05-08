@@ -7,6 +7,7 @@ export default {
     language: String,
     rate: Number,
     poster_path: String,
+    overview:String,
   }
 }
 </script>
@@ -16,10 +17,11 @@ export default {
     <div class="card">
       <div class="img-card"><img :src=" `https://image.tmdb.org/t/p/w500${poster_path}`" alt=""></div>
       <div class="film-info">
-        <div class="title m-y-10">Titotlo = {{ title }} </div>
-        <div class="original-title m-y-10">Originale = {{ originalTitle }} </div>
+        <div class="title ">{{ title }} </div>
+        <div class="original-title ">{{ originalTitle }} </div>
+        <div class="overview "> {{ overview }} </div>
         <div class="rate" > {{ rate }}</div>
-        <div class="language m-y-10">
+        <div class="language">
           <img :src="`/${language}.png`" :alt="language">
         </div>
 
@@ -34,17 +36,19 @@ export default {
 <style lang="scss" scoped>
 .card{
     width: calc(100% / 6);
-    height: 371.6px;
     position: relative;
     color: white;
     overflow: hidden;
-    padding: 2px;
+    padding: 4px;
     cursor: pointer;
+    border-radius: 18px ;
   }.img-card{
     height: 100%;
   }img{
     width: 100%;
     height: 100%;
+  }.overview{
+    font-size: small;
   }
 
   .film-info{
@@ -62,12 +66,13 @@ export default {
     width: 30px;
   }
 
-  .m-y-10{
-    margin: 10px 0px;
-  }
-
   .rate{
     display: none;
+  }
+
+  .original-title{
+    font-size: small;
+    color: lightgray;
   }
 
   .card:hover {

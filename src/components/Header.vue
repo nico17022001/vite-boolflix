@@ -5,12 +5,6 @@ import SearchBarHeader from './partials/SearchBar-Header.vue';
 export default {
   name:'Header',
 
-  data(){
-    return{
-
-    }
-  },
-
   components:{
     SearchBarHeader,
   },

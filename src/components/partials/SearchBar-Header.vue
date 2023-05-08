@@ -34,7 +34,9 @@ export default {
 
     <!-- BOTTONE CERCA -->
     <div id="search-container">
-      <button @click="$emit('srcMovie'), $emit('srcSerie')">CERCA</button>
+      <div id="lente" @click="$emit('srcMovie'), $emit('srcSerie')">
+        <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+      </div>
     </div>
   </div>
 </template>
@@ -62,12 +64,18 @@ export default {
     display: flex;
     width: 100%;
     justify-content: flex-end;
-  }
-  #search-container{
+  }#search-bar-container{
+    padding: 4px;
+  }#search-container{
     margin: 0px 10px;
-  }button{
-    padding: 0px 5px;
+    display: flex;
+    align-items: center;
+  }#lente{
+    width: 20px;
+    height: 20px;
     cursor: pointer;
   }
+  
+
 
 </style>
