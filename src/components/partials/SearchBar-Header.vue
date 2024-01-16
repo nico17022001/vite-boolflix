@@ -45,15 +45,18 @@ export default {
   #menu-container{
     display: flex;
     align-items: center;
+    width: 100%;
   }ul{
     display: flex;
     align-items: center;
+    width: 100%;
+    justify-content: space-around;
   }li{
     color: white;
     list-style: none;
     margin: 0px 10px;
     cursor: pointer;  
-    display: block ruby;
+  
   }
 
   li:hover{
